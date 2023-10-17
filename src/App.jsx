@@ -5,9 +5,7 @@ import ItemListContainer from './components/ItemListContainer'
 import '@materializecss/materialize/dist/css/materialize.min.css'
 
 function App() {
-  const [unaVariable, setUnaVariable] = useState("a") // hook de estado!!!
-  const mensajito = "esto es un mensajito"
-
+  
   return (
     <>
       <NavBar/>

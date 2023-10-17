@@ -3,18 +3,18 @@ import CartWidget from './CartWidget'
 
 const NavBar = () => {
   return (
-    <nav>
-      <div class="nav-wrapper">
-        <div className=''>Panda Bureau</div>
-        <div className="">
-          <a href="#" className='btn'>Clavos</a>
-          <a href="#" className='btn'>Tornillos</a>
-          <a href="#" className='btn'>Tuercas</a>
+    
+      <nav className="nav-wrapper row">
+        <div className='col s2'>Panda Bureau</div>
+        <div className="col s8">
+          <button className='btn'>Clavos</button>
+          <button className='btn'>Tornillos</button>
+          <button className='btn'>Tuercas</button>
         </div>
         
-        <div className=''><CartWidget/></div>
-      </div>
-    </nav>
+        <div className='col s2'><CartWidget/></div>
+      </nav>
+    
     )
 }
 export default NavBar
