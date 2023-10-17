@@ -1,8 +1,12 @@
 import React from 'react'
+import ItemList from './ItemList'
 
 const ItemListContainer = ({greeting}) => {
   return (
-    <div>{greeting}</div>
+    <>
+      <div>{greeting}</div>
+     <ItemList/>
+    </>
   )
 }
 
