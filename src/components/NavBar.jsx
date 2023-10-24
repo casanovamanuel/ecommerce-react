@@ -10,13 +10,13 @@ const NavBar = () => {
         <div className='col s2'>Panda Bureau</div>
       </Link>
       <div className="col s8">
-        <Link to="/1">
-          <div className='btn'>Clavos</div>
-        </Link>
-        <Link to="/2">
+        <Link to="/category/1">
           <div className='btn'>Tornillos</div>
         </Link>
-        <Link to="/3">
+        <Link to="/category/2">
+          <div className='btn'>Clavos</div>
+        </Link>
+        <Link to="/category/3">
           <div className='btn'>Tuercas</div>
         </Link>
       </div>
