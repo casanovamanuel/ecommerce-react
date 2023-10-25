@@ -18,7 +18,7 @@ const ItemDetail = ({product}) => {
         <CardFooter>
             
         
-        <ItemCounter maxCount={product.stock}/>
+        <ItemCounter productId={product.id} maxCount={product.stock}/>
         </CardFooter>
     </Card>
   )

@@ -1,7 +1,7 @@
 import { Button } from '@chakra-ui/react'
 import React, { useState } from 'react'
 
-const ItemCounter = ({maxCount}) => {
+const ItemCounter = ({maxCount, productId}) => {
     const [counter, setCounter] = useState(0)
 
     const increment = () => {
@@ -14,7 +14,7 @@ const ItemCounter = ({maxCount}) => {
             setCounter(counter - 1)
         }
     }
-    const avisar = () => {alert(counter)}
+    const avisar = () => {alert("agregar: " + productId + " - cantidad:" +counter)}
 
     return (
         <div>
