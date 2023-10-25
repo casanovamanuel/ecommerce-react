@@ -1,5 +1,6 @@
 import { Box, Card,CardBody, CardHeader, CardFooter } from '@chakra-ui/react'
 import React from 'react'
+import ItemCounter from './ItemCounter'
 
 const ItemDetail = ({product}) => {
   return (
@@ -10,9 +11,15 @@ const ItemDetail = ({product}) => {
                 una fotito
             </Box>
             <Box>
-            {product.description}
-            </Box></CardBody>
-        <CardFooter>price: {product.price} - stock : {product.stock}</CardFooter>
+            <p>{product.description}</p>
+            <p>price: {product.price} - stock : {product.stock}</p>
+            </Box>
+        </CardBody>
+        <CardFooter>
+            
+        
+        <ItemCounter maxCount={product.stock}/>
+        </CardFooter>
     </Card>
   )
 }
