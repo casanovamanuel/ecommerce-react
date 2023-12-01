@@ -1,8 +1,10 @@
 import { Button } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import { useState, useContext } from 'react'
+import { CartContext } from '../context/CartContext'
 
-const ItemCounter = ({maxCount, productId}) => {
+const ItemCounter = ({ maxCount, productId, price }) => {
     const [counter, setCounter] = useState(0)
+    const { addToCart } = useContext(CartContext)
 
     const increment = () => {
         if (counter < maxCount) {
@@ -14,7 +16,17 @@ const ItemCounter = ({maxCount, productId}) => {
             setCounter(counter - 1)
         }
     }
-    const avisar = () => {alert("agregar: " + productId + " - cantidad:" +counter)}
+
+
+
+    const avisar = () => {
+        //alert("agregar: " + productId + " - cantidad:" + counter)
+        addToCart({
+            id: productId,
+            quantity: counter,
+            value: price
+        })
+    }
 
     return (
         <div>

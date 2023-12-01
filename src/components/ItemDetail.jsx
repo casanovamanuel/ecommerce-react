@@ -17,6 +17,7 @@ const ItemDetail = ({ product }) => {
   if (product.image === undefined) {
     return (<Spinner />)
   }
+  console.log(product)
   return (
     <Card>
       <CardHeader>{product.name}</CardHeader>
@@ -32,7 +33,7 @@ const ItemDetail = ({ product }) => {
       <CardFooter>
 
 
-        <ItemCounter productId={product.id} maxCount={product.stock} />
+        <ItemCounter productId={product.id} maxCount={product.stock} price={product.price} />
       </CardFooter>
     </Card>
   )

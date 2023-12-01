@@ -21,7 +21,7 @@ export const CartContextProvider = ({ children }) => {
         if (element.id === undefined) {
             alert("no no no  mal armado")
         }
-        if (cart.elements.some((someElement) => { someElement.id === element.id })) {
+        if (cart.elements.some((someElement) => someElement.id === element.id)) {
             alert("no no no repitas")
         } else {
             let newCart = { ...cart }
@@ -33,7 +33,7 @@ export const CartContextProvider = ({ children }) => {
 
     const removeFromCart = (id) => {
         let newCart = { ...cart }
-        newCart.elements = newCart.elements.filter((filterElement) => { filterElement.id !== id })
+        newCart.elements = newCart.elements.filter((filterElement) => filterElement.id !== id)
         setCart(newCart)
     }
 

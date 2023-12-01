@@ -3,10 +3,7 @@ import { CartContext } from '../context/CartContext'
 
 
 const CartWidget = () => {
-  const { cart, addToCart, removeFromCart, clearCart } = useContext(CartContext)
-  //clearCart()
-
-  //addToCart({ id: 1 })
+  const { cart } = useContext(CartContext)
 
   return (
     <div className="center" >
