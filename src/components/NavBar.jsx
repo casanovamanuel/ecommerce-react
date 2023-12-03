@@ -1,28 +1,33 @@
 import React from 'react'
 import CartWidget from './CartWidget'
 import { Link } from 'react-router-dom'
+import { Flex, Box, Spacer, Button, Center } from '@chakra-ui/react'
+import Brand from './Brand'
+
 
 const NavBar = () => {
   return (
-
-    <nav className="nav-wrapper row">
+    <Flex bg="lightcyan">
       <Link to="/">
-        <div className='col s2'>Panda Bureau</div>
+        <Brand />
       </Link>
-      <div className="col s8">
+      <Spacer />
+      <Center p='4'>
         <Link to="/category/1">
-          <div className='btn'>Tornillos</div>
+          <Button bg="Blue" color="White">Tornillos</Button>
         </Link>
         <Link to="/category/2">
-          <div className='btn'>Clavos</div>
+          <Button bg="Blue" color="White">Clavos</Button>
         </Link>
         <Link to="/category/3">
-          <div className='btn'>Tuercas</div>
+          <Button bg="Blue" color="White">Tuercas</Button>
         </Link>
-      </div>
-
-      <div className='col s2'><CartWidget /></div>
-    </nav>
+      </Center>
+      <Spacer />
+      <Box p='4'>
+        <CartWidget />
+      </Box>
+    </Flex>
 
   )
 }

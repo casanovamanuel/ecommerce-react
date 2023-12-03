@@ -1,6 +1,6 @@
-import { Button } from '@chakra-ui/react'
 import { useState, useContext } from 'react'
 import { CartContext } from '../context/CartContext'
+import { Flex, Button, Spacer, Text, Center } from '@chakra-ui/react'
 
 const ItemCounter = ({ maxCount, productId, price }) => {
     const [counter, setCounter] = useState(0)
@@ -29,13 +29,16 @@ const ItemCounter = ({ maxCount, productId, price }) => {
     }
 
     return (
-        <div>
-            <div>
-                <Button onClick={decrement}>-</Button>
-                <Button onClick={avisar}>{counter} un</Button>
-                <Button onClick={increment}>+</Button>
-            </div>
-        </div>
+        <Flex>
+
+            <Button onClick={decrement}>-</Button>
+            <Center m={2}>{counter} un   </Center>
+
+            <Button onClick={increment}>+</Button>
+            <Spacer />
+            <Button ml={2} onClick={avisar}>Agregar al Carrito</Button>
+
+        </Flex>
     )
 }
 

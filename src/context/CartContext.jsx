@@ -6,13 +6,11 @@ export const CartContextProvider = ({ children }) => {
     const cartDefault = {
         elements: [],
         total: function () { // el uso de flechitas aca se rompe
-            let sum = 0
-            this.element.forEach(elementFor => {
-                sum += elementFor.quantity * elementFor.value
-            })
-            return sum
+            return this.elements.reduce((acumulado, actual) => acumulado + (actual.value * actual.quantity), 0)
         },
-        size: function () { return this.elements.length }
+        size: function () {
+            return this.elements.reduce((acumulado, actual) => acumulado + actual.quantity, 0)
+        }
     }
     const [cart, setCart] = useState(cartDefault)
 
