@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ChakraProvider } from '@chakra-ui/react'
 import { CartContextProvider } from './context/CartContext'
 import Cart from './components/Cart'
+import PurchaseForm from './components/PurchaseForm'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route exact path="/category/:categoryId" element={<ItemListContainer />} />
             <Route exact path="/item/:itemId" element={<ItemDetailContainer />} />
             <Route exact path="/cart" element={<Cart />} />
+            <Route exact path="/purchase" element={<PurchaseForm />} />
           </Routes>
 
         </BrowserRouter>
