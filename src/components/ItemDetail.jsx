@@ -31,7 +31,10 @@ const ItemDetail = ({ product }) => {
           </Box>
         </CardBody>
         <CardFooter>
-          <ItemCounter productId={product.id} maxCount={product.stock} price={product.price} />
+          <ItemCounter productId={product.id}
+            maxCount={product.stock}
+            price={product.price}
+            productName={product.name} />
         </CardFooter>
       </Card>
     </Center>

@@ -13,14 +13,14 @@ const NavBar = () => {
       </Link>
       <Spacer />
       <Center p='4'>
-        <Link to="/category/1">
-          <Button bg="Blue" color="White">Tornillos</Button>
+        <Link to="/category/1" >
+          <Button margin="4px" bg="Blue" color="White">Tornillos</Button>
         </Link>
         <Link to="/category/2">
-          <Button bg="Blue" color="White">Clavos</Button>
+          <Button margin="4px" bg="Blue" color="White">Clavos</Button>
         </Link>
         <Link to="/category/3">
-          <Button bg="Blue" color="White">Tuercas</Button>
+          <Button margin="4px" bg="Blue" color="White">Tuercas</Button>
         </Link>
       </Center>
       <Spacer />

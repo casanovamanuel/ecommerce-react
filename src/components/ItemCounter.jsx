@@ -2,7 +2,7 @@ import { useState, useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 import { Flex, Button, Spacer, Text, Center } from '@chakra-ui/react'
 
-const ItemCounter = ({ maxCount, productId, price }) => {
+const ItemCounter = ({ maxCount, productId, price, productName }) => {
     const [counter, setCounter] = useState(0)
     const { addToCart } = useContext(CartContext)
 
@@ -24,7 +24,8 @@ const ItemCounter = ({ maxCount, productId, price }) => {
         addToCart({
             id: productId,
             quantity: counter,
-            value: price
+            value: price,
+            name: productName
         })
     }
 
